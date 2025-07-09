@@ -1,0 +1,15 @@
+# Ignore everything
+/*
+
+# Files to include
+!/.gitignore
+!/electron-flags.conf
+
+# Folders to include
+!/nvim/
+!/waybar/
+!/hypr/
+!/kitty/
+!/zathura/
+!/swappy/
+
