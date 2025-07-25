@@ -1,16 +1,3 @@
-open_neotree_and_terminal = function()
-  -- Close all other windows
-  vim.cmd("only")
-
-  vim.cmd("Neotree filesystem reveal right")
-  vim.cmd("horizontal terminal")
-
-  vim.cmd("vertical resize 70")
-
-  -- Re-focus to original file
-  vim.cmd("wincmd h")
-end
-
 return {
   "nvim-neo-tree/neo-tree.nvim",
   branch = "v3.x",
@@ -25,7 +12,7 @@ return {
   ---@type neotree.Config?
   opts = {
     window = {
-      position = "right",
+      position = "float",
 
       mappings = {
         ["o"] = "system_open",
@@ -43,8 +30,7 @@ return {
   },
 
   keys = {
-    { "<leader>tt", open_neotree_and_terminal },
-    { "<leader>tr", ":Neotree filesystem reveal right<CR>" },
+    { "<leader>tr", ":Neotree filesystem reveal<CR>" },
   },
 
   filesystem = {
