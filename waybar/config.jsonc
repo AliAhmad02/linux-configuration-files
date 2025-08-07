@@ -20,11 +20,10 @@
         "icon-size": 15,
         "spacing": 10
     },
-
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": " {:%d/%m/%Y}",
-        "format": " {:%H:%M}"
+        "format": "󰥔 {:%H:%M}"
     },
     "backlight": {
         "format": "{percent}% {icon}",
@@ -37,10 +36,11 @@
         },
         "format": "{capacity}% {icon}",
         "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
+        "format-charging": "{capacity}% 󰂄",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+/*        "format-icons": ["", "", "", "", ""]*/
     },
 
     "pulseaudio": {
@@ -77,8 +77,8 @@
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "",
-            "deactivated": ""
+            "activated": "🌞",
+            "deactivated": "🌜"
         }
     },
 
