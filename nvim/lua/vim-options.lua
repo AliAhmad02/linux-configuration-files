@@ -4,6 +4,7 @@ vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.cmd("set splitright")
 vim.cmd("set splitbelow")
+vim.cmd("set signcolumn=yes")
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
