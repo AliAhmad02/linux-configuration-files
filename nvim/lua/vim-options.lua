@@ -5,6 +5,7 @@ vim.cmd("set shiftwidth=2")
 vim.cmd("set splitright")
 vim.cmd("set splitbelow")
 vim.cmd("set signcolumn=yes")
+vim.cmd("set autochdir")
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
