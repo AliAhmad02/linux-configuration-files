@@ -32,8 +32,8 @@ local email = "thunderbird"
 --
 hl.on("hyprland.start", function()
 	hl.exec_cmd("hyprlock")
-	hl.exec_cmd(terminal)
-	hl.exec_cmd(email)
+	hl.exec_cmd(terminal, { workspace = "1 silent" })
+	hl.exec_cmd(email, { workspace = "2 silent" })
 	hl.exec_cmd("hypridle")
 	hl.exec_cmd("nm-applet --indicator")
 	hl.exec_cmd("waybar & hyprpaper & swaync")
@@ -180,8 +180,14 @@ hl.bind(mainMod .. " + M", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
 
+-- Binding for reloading waybar
+hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("killall waybar;waybar"))
+
+-- Binding for going to previous workspace
+hl.bind(mainMod .. " + TAB", hl.dsp.focus({ workspace = "previous" }))
+
 -- Toggle notification panel
-hl.bind(mainMod .. " + N", hl.dsp.exec_cmd())
+hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("swaync-client -t"))
 
 -- Switch between internal display (eDP-1) and external display
 hl.bind(mainMod .. " + SHIFT + P", hl.dsp.exec_cmd("~/.config/hypr/scripts/switch_displays_internal_external.sh"))
