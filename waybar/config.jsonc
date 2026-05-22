@@ -27,9 +27,11 @@
         "spacing": 10,
     },
     "clock": {
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": " {:%d/%m/%Y}",
-        "format": "󰥔 {:%H:%M}"
+/*        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",*/
+        "tooltip-format": " {:%d/%m/%Y}",
+/*        "format-alt": " {:%d/%m/%Y}",*/
+        "format": "󰥔 {:%H:%M}",
+        "on-click": "gsimplecal",
     },
     "backlight": {
         "format": "{percent}% {icon}",
@@ -62,6 +64,7 @@
             "portable": "",
             "car": "",
             "default": ["󰕿", "󰖀", "󰕾"]
+//             "default": ["󰕿", "󰖀", "󰕾"]
         },
         "on-click": "pavucontrol"
     },
@@ -69,9 +72,9 @@
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{signalStrength}% ",
-        "format-ethernet": "",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
+        "format-ethernet": "󰈀",
+        "tooltip-format": "{ifname} via {gwaddr} 󰈀",
+        "format-linked": "{ifname} (No IP) 󰈀",
         "format-disconnected": "⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
