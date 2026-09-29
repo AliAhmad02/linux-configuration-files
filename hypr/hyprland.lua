@@ -212,6 +212,12 @@ hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + up", hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down", hl.dsp.focus({ direction = "down" }))
 
+-- Swap windows with SHIFT + mainMod + arrow keys
+hl.bind(mainMod .. " + SHIFT + left", hl.dsp.window.swap({ direction = "left" }))
+hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.swap({ direction = "right" }))
+hl.bind(mainMod .. " + SHIFT + up", hl.dsp.window.swap({ direction = "up" }))
+hl.bind(mainMod .. " + SHIFT + down", hl.dsp.window.swap({ direction = "down" }))
+
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
 for i = 1, 10 do
@@ -280,10 +286,10 @@ hl.curve("easeOutExpo", { type = "bezier", points = { { 0.16, 1 }, { 0.3, 1 } } 
 --------------------------------------------------------------------------------
 -- Animation Rules
 --------------------------------------------------------------------------------
-hl.animation({ leaf = "windows", enabled = true, speed = 3, bezier = "md3_decel", style = "popin 60%" })
+hl.animation({ leaf = "windows", enabled = true, speed = 2.5, bezier = "md3_decel", style = "popin 60%" })
 hl.animation({ leaf = "border", enabled = true, speed = 10, bezier = "default" })
 hl.animation({ leaf = "fade", enabled = true, speed = 2.5, bezier = "md3_decel" })
-hl.animation({ leaf = "workspaces", enabled = true, speed = 3.5, bezier = "easeOutExpo", style = "slide" })
+hl.animation({ leaf = "workspaces", enabled = true, speed = 0.8, bezier = "easeOutExpo", style = "slide" })
 hl.animation({ leaf = "specialWorkspace", enabled = true, speed = 3, bezier = "md3_decel", style = "slidevert" })
 
 --------------------------------

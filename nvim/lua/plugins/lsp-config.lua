@@ -20,6 +20,7 @@ return {
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+      vim.lsp.log.set_level("warn")
 			vim.lsp.config("lua_ls", { capabilities = capabilities })
 			vim.lsp.config("asm_lsp", { capabilities = capabilities })
 			vim.lsp.config("rust_analyzer", {
